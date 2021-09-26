@@ -1,5 +1,7 @@
 package chapter1.Practice;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
 
@@ -10,6 +12,14 @@ public class Book implements Cloneable {
 
 	public String getTitle() {
 		return this.title;
+	}
+
+	public void set(String title, String date, String comment) throws ParseException {
+		SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd");
+
+		this.title = title;
+		this.publishDate = df.parse(date);
+		this.comment = comment;
 	}
 
 	public int hashCode() {
