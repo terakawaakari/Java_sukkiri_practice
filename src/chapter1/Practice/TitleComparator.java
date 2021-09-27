@@ -1,4 +1,4 @@
-package chapter1.Practice;
+package chapter1.practice;
 
 import java.util.Comparator;
 
